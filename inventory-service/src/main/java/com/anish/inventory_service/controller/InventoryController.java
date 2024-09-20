@@ -3,6 +3,7 @@ package com.anish.inventory_service.controller;
 import com.anish.inventory_service.dto.InventoryResponse;
 import com.anish.inventory_service.service.InventoryService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +13,6 @@ import java.util.List;
 @RequestMapping("/api/inventory")
 @RequiredArgsConstructor
 public class InventoryController {
-
 
     private final InventoryService inventoryService;
 

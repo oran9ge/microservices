@@ -48,17 +48,18 @@ class ProductServiceApplicationTests {
 		String productRequestString= objectMapper.writeValueAsString(productRequest);
 		mockMvc.perform(MockMvcRequestBuilders.post("/api/product")
 				.contentType(MediaType.APPLICATION_JSON)
-				.content(productRequestString)
-				.andExpect(status().isCreated())
-		);
+				.content(productRequestString))
+				.andExpect(status().isCreated());
+
+
 	}
 
 	private ProductRequest getProductRequest(){
 		return ProductRequest.builder()
 				.name("iphobne123")
 				.description("iposadui")
-				.price(BigDecimal.valueOf(1200)
-						.build();
+				.price(BigDecimal.valueOf(1200))
+				.build();
 	}
 
 }
